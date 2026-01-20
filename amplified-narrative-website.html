@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amplified Narrative - The Narrative Imperative</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+            --red: #FF0000;
+            --dark-red: #CC0000;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2rem;
+            text-align: center;
+            background: var(--black);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255, 0, 0, 0.03) 2px,
+                    rgba(255, 0, 0, 0.03) 4px
+                );
+            pointer-events: none;
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            color: var(--white);
+        }
+
+        .logo span {
+            color: var(--red);
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 8vw, 6rem);
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            line-height: 0.95;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            color: var(--white);
+        }
+
+        .hero h1 span {
+            color: var(--red);
+            display: block;
+        }
+
+        .hero-subhead {
+            font-size: clamp(1.25rem, 3vw, 2rem);
+            font-weight: 700;
+            max-width: 900px;
+            margin: 0 auto 3rem;
+            line-height: 1.3;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background: var(--red);
+            color: var(--white);
+            padding: 1.5rem 3rem;
+            font-size: 1.25rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            transition: all 0.2s;
+            border: 3px solid var(--red);
+            cursor: pointer;
+        }
+
+        .cta-primary:hover {
+            background: var(--white);
+            color: var(--red);
+            transform: translate(-4px, -4px);
+            box-shadow: 4px 4px 0 var(--red);
+        }
+
+        .section {
+            padding: 6rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-alt {
+            background: var(--white);
+            color: var(--black);
+        }
+
+        .section-red {
+            background: var(--red);
+            color: var(--white);
+        }
+
+        h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            line-height: 1.1;
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .problem-card {
+            border: 3px solid var(--black);
+            padding: 2rem;
+            background: var(--white);
+        }
+
+        .problem-card h3 {
+            color: var(--red);
+            margin-bottom: 1rem;
+        }
+
+        .stat {
+            font-size: clamp(3rem, 6vw, 5rem);
+            font-weight: 900;
+            color: var(--red);
+            line-height: 1;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-alt .stat {
+            color: var(--black);
+        }
+
+        .manifesto {
+            font-size: 1.5rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin: 2rem 0;
+        }
+
+        .manifesto-point {
+            margin: 2rem 0;
+            padding-left: 2rem;
+            border-left: 5px solid var(--red);
+        }
+
+        .method-grid {
+            display: grid;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .method-item {
+            border-left: 5px solid var(--red);
+            padding-left: 2rem;
+        }
+
+        .method-item h3 {
+            color: var(--red);
+        }
+
+        .section-red .method-item {
+            border-left-color: var(--white);
+        }
+
+        .section-red .method-item h3 {
+            color: var(--white);
+        }
+
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .tool-card {
+            background: var(--black);
+            color: var(--white);
+            padding: 3rem 2rem;
+            border: 3px solid var(--black);
+            transition: all 0.3s;
+        }
+
+        .tool-card:hover {
+            transform: translate(-6px, -6px);
+            box-shadow: 6px 6px 0 var(--red);
+        }
+
+        .tool-card h3 {
+            color: var(--red);
+            margin-bottom: 1.5rem;
+        }
+
+        .tool-cta {
+            display: inline-block;
+            color: var(--red);
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
+            letter-spacing: 0.1em;
+            border-bottom: 2px solid var(--red);
+            padding-bottom: 0.25rem;
+            transition: all 0.2s;
+        }
+
+        .tool-cta:hover {
+            color: var(--white);
+            border-bottom-color: var(--white);
+        }
+
+        .final-cta {
+            text-align: center;
+            padding: 8rem 2rem;
+            background: var(--red);
+        }
+
+        .final-cta h2 {
+            margin-bottom: 1rem;
+        }
+
+        .final-cta p {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-secondary {
+            display: inline-block;
+            background: transparent;
+            color: var(--white);
+            padding: 1.5rem 3rem;
+            font-size: 1.25rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            transition: all 0.2s;
+            border: 3px solid var(--white);
+        }
+
+        .cta-secondary:hover {
+            background: var(--white);
+            color: var(--red);
+            transform: translate(-4px, -4px);
+            box-shadow: 4px 4px 0 var(--black);
+        }
+
+        .emphasis {
+            font-weight: 900;
+            color: var(--red);
+        }
+
+        .section-alt .emphasis {
+            color: var(--black);
+        }
+
+        .section-red .emphasis {
+            color: var(--white);
+            text-decoration: underline;
+            text-decoration-thickness: 3px;
+        }
+
+        p {
+            font-size: 1.125rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+
+        .large-text {
+            font-size: 1.5rem;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            .section {
+                padding: 4rem 1.5rem;
+            }
+
+            .problem-grid,
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .manifesto {
+                font-size: 1.25rem;
+            }
+
+            .final-cta {
+                padding: 5rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="logo">Amplified <span>Narrative</span></div>
+        <h1>
+            The Traditional<br>
+            Software Company<br>
+            <span>Is Dead</span>
+        </h1>
+        <p class="hero-subhead">
+            AI commoditized capability. The only moat left is narrative—and most founders are bleeding $500K/year because they don't know how to build one.
+        </p>
+        <a href="#tools" class="cta-primary">Stop Competing. Start Creating.</a>
+    </section>
+
+    <!-- The Platform Shift -->
+    <section class="section">
+        <h2>The Platform Shift</h2>
+        <p class="large-text">
+            In 2026, AI is the platform. The prompt is the interface. Every founder is building utility in the same ecosystem, using the same foundational models, accessing the same capabilities.
+        </p>
+        <div class="manifesto-point">
+            <p class="manifesto">The technical moat you spent years building? <span class="emphasis">It's now a weekend project.</span></p>
+        </div>
+        <div class="manifesto-point">
+            <p class="manifesto">The feature advantage you launched with? <span class="emphasis">Replicated in a sprint.</span></p>
+        </div>
+        <div class="manifesto-point">
+            <p class="manifesto">The "10x better" product story? <span class="emphasis">Irrelevant when everyone has access to the same intelligence layer.</span></p>
+        </div>
+        <p class="large-text" style="margin-top: 3rem;">
+            This isn't a temporary disruption. <strong>This is the new permanent state.</strong>
+        </p>
+    </section>
+
+    <!-- The Competition Tax -->
+    <section class="section section-alt">
+        <h2>The Competition Tax</h2>
+        <p class="large-text">
+            Here's the brutal math: competing in an established category costs you <span class="emphasis">$400-600K annually</span> in invisible taxes.
+        </p>
+        
+        <div class="problem-grid">
+            <div class="problem-card">
+                <div class="stat">2-3x</div>
+                <h3>Longer Sales Cycles</h3>
+                <p>Fighting for share of existing budget instead of creating new budget</p>
+            </div>
+            <div class="problem-card">
+                <div class="stat">40-60%</div>
+                <h3>Marketing Inflation</h3>
+                <p>Bidding against entrenched competitors for the same keywords and audiences</p>
+            </div>
+            <div class="problem-card">
+                <div class="stat">30-50%</div>
+                <h3>Deal Compression</h3>
+                <p>Feature-for-feature comparison drives prices down, not up</p>
+            </div>
+        </div>
+
+        <p class="large-text" style="margin-top: 3rem;">
+            That's not marketing budget. That's <span class="emphasis">competition tax</span>—the premium you pay for fighting on someone else's battlefield.
+        </p>
+        <p class="large-text">
+            Meanwhile, category creators don't compete. They redefine. They create new budget. They set new terms of engagement.
+        </p>
+    </section>
+
+    <!-- The Only Moat Left -->
+    <section class="section section-red">
+        <h2>The Only Moat Left</h2>
+        <p class="large-text">
+            When the platform commoditizes capability, only one differentiator remains: <span class="emphasis">narrative</span>.
+        </p>
+        <p class="large-text">
+            Not messaging. Not positioning. Not "thought leadership."
+        </p>
+        <p class="large-text">
+            <strong>Narrative.</strong> The story that transforms how people see the problem, the solution, and themselves.
+        </p>
+        
+        <div class="method-grid" style="margin-top: 4rem;">
+            <div class="method-item">
+                <h3>Built Daily</h3>
+                <p>The narrative doesn't exist in a deck anymore. It's built, refined, and amplified in real time through the founder's voice.</p>
+            </div>
+            <div class="method-item">
+                <h3>Amplified Through Action</h3>
+                <p>Your narrative is your product development happening in public. Your market education. Your category creation. All happening simultaneously.</p>
+            </div>
+            <div class="method-item">
+                <h3>The Founder's Voice</h3>
+                <p>You can't outsource this. Authenticity is the only signal that cuts through AI-generated noise. Your voice. Your vision. Your daily commitment to building in public.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Velocity Problem -->
+    <section class="section">
+        <h2>The Velocity Problem</h2>
+        <p class="large-text">
+            The old playbook assumed time. Time to build network effects. Time to establish switching costs. Time to create data moats.
+        </p>
+        <p class="large-text">
+            <span class="emphasis">That playbook is obsolete.</span>
+        </p>
+        <p class="large-text" style="margin-top: 3rem;">
+            Today, the mechanisms companies once used to blitzscale—network effects, platform lock-in, proprietary data—are now just <strong>survival mechanisms</strong>. Table stakes. The baseline to stay in the game.
+        </p>
+        <p class="large-text">
+            What matters now is <span class="emphasis">moat velocity</span>: How fast can you establish meaningful differentiation before the platform commoditizes your advantage?
+        </p>
+        <p class="large-text">
+            Because it will. The only question is whether you've built narrative escape velocity first.
+        </p>
+    </section>
+
+    <!-- The New Founder -->
+    <section class="section section-alt">
+        <h2>The New Founder</h2>
+        <p class="large-text">
+            Tomorrow's category winner isn't necessarily venture-backed. They don't have tier-one VC support or eight-figure Series A rounds.
+        </p>
+        <p class="large-text">
+            They're founders with great ideas who can develop fast—but more importantly, <span class="emphasis">they can narrate fast</span>.
+        </p>
+        
+        <div class="manifesto-point" style="margin-top: 3rem;">
+            <p class="manifesto">There is no lightning strike moment. No single launch event. No consultant-driven category design process that takes 18 months.</p>
+        </div>
+        
+        <p class="large-text" style="margin-top: 3rem;">
+            The category emerges from the daily rhythm of narrative building. Every post. Every piece of content. Every public iteration of the idea.
+        </p>
+        <p class="large-text">
+            <strong>You're not building in private and launching in public anymore.</strong> You're building the product in public AND building the narrative in public—simultaneously, transparently, adjusting based on market reaction in real time.
+        </p>
+    </section>
+
+    <!-- The Method -->
+    <section class="section section-red">
+        <h2>The Method</h2>
+        <p class="large-text">
+            Traditional category creation assumed a linear path: define the category, build the product, launch with massive awareness.
+        </p>
+        <p class="large-text">
+            That method is dead because it assumed stability. Time. Control.
+        </p>
+        <p class="large-text" style="margin-top: 2rem;">
+            <strong>The new reality demands a different approach:</strong>
+        </p>
+        
+        <div class="method-grid" style="margin-top: 4rem;">
+            <div class="method-item">
+                <h3>Narrative as Development</h3>
+                <p>Your public narrative isn't marketing—it's R&D. It's how you test ideas, refine positioning, discover resonance, and invite your market to co-create with you.</p>
+            </div>
+            <div class="method-item">
+                <h3>The Founder's Voice as Distribution</h3>
+                <p>You can't outsource this. The narrative must come from the founder because authenticity is the only signal that cuts through noise.</p>
+            </div>
+            <div class="method-item">
+                <h3>Amplification as Validation</h3>
+                <p>You don't guess whether your narrative works. You watch how it spreads. You measure how it transforms conversations. You iterate based on what resonates—daily, weekly, constantly.</p>
+            </div>
+            <div class="method-item">
+                <h3>Velocity as Strategy</h3>
+                <p>You're not building for a category that will exist in two years. You're creating the category that must exist NOW—before the platform commoditizes your current advantage.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section id="tools" class="section section-alt">
+        <h2>Start Building Today</h2>
+        <p class="large-text">
+            Every founder faces a choice: Spend $400-600K annually fighting for scraps in someone else's category, or invest that energy into creating a category where you set the terms.
+        </p>
+        
+        <div class="tools-grid">
+            <div class="tool-card">
+                <h3>Category POV Canvas</h3>
+                <p>Stop guessing whether your category story resonates. This framework helps you articulate the problem transformation that makes your category inevitable—not incremental.</p>
+                <p><strong>Build your narrative foundation in 30 minutes.</strong></p>
+                <a href="#" class="tool-cta">Get The Canvas →</a>
+            </div>
+            
+            <div class="tool-card">
+                <h3>Moat Velocity Assessment</h3>
+                <p>Discover how fast the market is commoditizing your current advantages—and whether you're building narrative escape velocity fast enough to matter.</p>
+                <p><strong>Know your timeline. Adjust your strategy.</strong></p>
+                <a href="#" class="tool-cta">Take The Assessment →</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA -->
+    <section class="final-cta">
+        <h2>The Category Won't Wait.</h2>
+        <h2>Neither Should You.</h2>
+        <p>
+            Get the frameworks, methodologies, and systems to become a narrative-driven category creator—without the six-figure consultant, without the 18-month process, without tier-one VC backing.
+        </p>
+        <p>
+            <strong>You just need a compelling vision and the commitment to amplify it daily.</strong>
+        </p>
+        <a href="#tools" class="cta-secondary">Start Now</a>
+    </section>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
