@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Amplified Narrative</title>
+    <meta name="description" content="The story behind Amplified Narrative and why category creation needs to evolve for today's founders.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+            --red: #FF0000;
+            --dark-red: #CC0000;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .nav {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--red);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--red);
+        }
+
+        .hero-about {
+            padding: 4rem 2rem 6rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+            font-weight: 600;
+            color: var(--red);
+            margin-bottom: 3rem;
+        }
+
+        .content-section {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .photo-section {
+            max-width: 400px;
+            margin: 0 auto 4rem;
+            padding: 0 2rem;
+        }
+
+        .photo-section img {
+            width: 100%;
+            height: auto;
+            border: 5px solid var(--white);
+            filter: grayscale(100%) contrast(1.1);
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            line-height: 1.1;
+            color: var(--red);
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 800;
+            margin: 3rem 0 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .emphasis {
+            font-weight: 900;
+            color: var(--red);
+        }
+
+        .story-point {
+            margin: 2rem 0;
+            padding-left: 2rem;
+            border-left: 5px solid var(--red);
+        }
+
+        .pullquote {
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin: 3rem 0;
+            padding: 2rem;
+            border-top: 3px solid var(--red);
+            border-bottom: 3px solid var(--red);
+            text-align: center;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: var(--red);
+            margin-top: 4rem;
+        }
+
+        .cta-section h2 {
+            color: var(--white);
+            margin-bottom: 2rem;
+        }
+
+        .cta-section p {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background: var(--white);
+            color: var(--red);
+            padding: 1.5rem 3rem;
+            font-size: 1.25rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            transition: all 0.2s;
+            border: 3px solid var(--white);
+        }
+
+        .cta-primary:hover {
+            background: var(--black);
+            color: var(--white);
+            border-color: var(--black);
+            transform: translate(-4px, -4px);
+            box-shadow: 4px 4px 0 var(--white);
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .hero-about {
+                padding: 2rem 1.5rem 4rem;
+            }
+
+            .content-section {
+                padding: 2rem 1.5rem;
+            }
+
+            p {
+                font-size: 1.125rem;
+            }
+
+            .pullquote {
+                font-size: 1.5rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html" class="logo">Amplified <span>Narrative</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="index.html#tools">Tools</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-about">
+        <h1>The Traditional Software Company Is Dead</h1>
+        <p class="subtitle">I learned this the hard way. Then I figured out what works instead.</p>
+    </section>
+
+    <!-- Photo Section - Replace src with actual photo -->
+    <section class="photo-section">
+        <img src="brandon-photo.jpg" alt="Brandon">
+    </section>
+
+    <!-- Story Content -->
+    <section class="content-section">
+        <h2>Why I Built This</h2>
+        
+        <p>In 2025, I realized something that changed everything: the fundamental shifts in how you win in marketing had essentially nullified the lightning strike concept from Play Bigger.</p>
+
+        <p>AI reduced technical hurdles. Founders were bringing products to market faster than ever. The heavily venture-funded company wasn't the default anymore. And the rise of the individual empire—playing out in real-time on social media—meant we needed a completely different approach to positioning and narrative.</p>
+
+        <p><span class="emphasis">The traditional software company was dead. And nobody had updated the playbook.</span></p>
+
+        <div class="story-point">
+            <h3>The Realization</h3>
+            <p>I saw it clearly in my own work. At one company, I developed a category design that could have transformed how they went to market. They chose not to use it.</p>
+            
+            <p>The result? Prospects couldn't understand their core value. Buying committees couldn't reach consensus. A technically brilliant platform languished because nobody could articulate why it mattered.</p>
+            
+            <p>Great technology wasn't enough. It never had been. But now, with AI commoditizing technical capabilities, it mattered even less.</p>
+        </div>
+
+        <div class="story-point">
+            <h3>The Pattern</h3>
+            <p>I kept seeing it. Founders doing everything right according to the traditional playbook—shipping features, optimizing funnels, running ads—but not seeing the growth they needed.</p>
+            
+            <p>Friends losing everything because they ignored the importance of category and narrative.</p>
+            
+            <p>Companies burning through runway competing in established categories, paying $400-600K annually in competition tax without realizing there was a different game to play.</p>
+        </div>
+
+        <div class="pullquote">
+            "I've watched companies with better technology lose to companies with better narratives. Every. Single. Time."
+        </div>
+
+        <div class="story-point">
+            <h3>What Actually Works</h3>
+            <p>Through my work creating categories like Context-Aware eDiscovery, I learned what category creation looks like in 2026:</p>
+            
+            <p><span class="emphasis">It's not a lightning strike.</span> It's daily narrative building. It's the founder's voice, amplified consistently, transforming how the market thinks about the problem.</p>
+            
+            <p><span class="emphasis">It's not a consultant-driven 18-month engagement.</span> It's accessible frameworks that founders can use themselves to define and amplify their category POV.</p>
+            
+            <p><span class="emphasis">It's not about being venture-backed.</span> It's about having a compelling vision and the commitment to build your narrative in public.</p>
+        </div>
+
+        <h2>The AI Platform Shift</h2>
+        
+        <p>The timing couldn't be more urgent. AI as the platform means every founder is building utility in the same ecosystem, using the same foundational models, accessing the same capabilities.</p>
+        
+        <p>The technical moat you spent years building? It's now a weekend project.</p>
+        
+        <p>The feature advantage you launched with? Replicated in a sprint.</p>
+        
+        <p><span class="emphasis">When the platform commoditizes capability, only one differentiator remains: narrative.</span></p>
+
+        <div class="story-point">
+            <h3>Why Now</h3>
+            <p>I realized this was my passion. Not just creating categories for one company, but helping founders everywhere understand that category creation isn't optional anymore—it's survival.</p>
+            
+            <p>The founders who win in 2026 and beyond won't be the ones with the best technology. They'll be the ones who can narrate their vision while building it, who can transform how their market thinks about the problem, who can build narrative escape velocity before the platform commoditizes their advantages.</p>
+        </div>
+
+        <h2>What I Believe</h2>
+        
+        <p>Category creation has evolved. The Play Bigger playbook from 2016 was right about the importance of categories, but wrong about how to create them in today's market.</p>
+        
+        <p>You don't need a massive budget. You don't need expensive consultants. You don't need to be venture-backed.</p>
+        
+        <p><span class="emphasis">You need a compelling category POV and the commitment to amplify it daily.</span></p>
+        
+        <p>You need to understand the competition tax you're paying by competing in established categories.</p>
+        
+        <p>You need to know whether you're building narrative escape velocity fast enough before the market commoditizes your advantages.</p>
+        
+        <p>And you need accessible frameworks to do this yourself—because nobody understands your category insight better than you do.</p>
+
+        <div class="pullquote">
+            "The traditional software company is dead. AI commoditized capability. Narrative is the only moat left."
+        </div>
+
+        <h2>What This Means for You</h2>
+        
+        <p>If you're a founder who feels like you're doing everything right but not seeing the growth you need—this is for you.</p>
+        
+        <p>If you're competing in an established category and watching your margins compress—this is for you.</p>
+        
+        <p>If you're building something genuinely different but prospects see you as "basically the same as [competitor]"—this is for you.</p>
+        
+        <p>If you know there's a better way to frame your value but can't articulate it—this is for you.</p>
+        
+        <p><span class="emphasis">Category creation isn't about being revolutionary. It's about seeing what others don't and having the courage to build your narrative in public.</span></p>
+        
+        <p>I've been part of a significant exit at a Sequoia-backed company. I've watched categories succeed and fail. I've learned what works and what's obsolete.</p>
+        
+        <p>Now I'm helping founders like you build categories without the six-figure consultant, without the 18-month process, without the assumption that you need tier-one VC backing to transform a market.</p>
+        
+        <p>You just need a compelling vision and the commitment to amplify it daily.</p>
+        
+        <p>The category won't wait. Neither should you.</p>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Stop Competing?</h2>
+        <p>Start building your category today with the tools that work in 2026.</p>
+        <a href="index.html#tools" class="cta-primary">Get Started</a>
+    </section>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
