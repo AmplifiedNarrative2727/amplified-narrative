@@ -18,6 +18,47 @@
             --dark-red: #CC0000;
         }
 
+        .nav {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+            color: var(--white);
+            text-decoration: none;
+        }
+        
+        .nav-logo span {
+            color: var(--red);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+        
+        .nav-links a:hover {
+            color: var(--red);
+        }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
             background: var(--black);
@@ -428,28 +469,6 @@
                     font-size: 1rem;
                 }
             }
-        
-           .nav-hero {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                margin-bottom: 3rem;
-                padding: 2rem 0;
-                width: 100%;
-            }
-            
-            .nav-hero .logo {
-                font-size: 2rem;
-                font-weight: 900;
-                letter-spacing: -0.05em;
-                text-transform: uppercase;
-                color: var(--white);
-                text-decoration: none;
-            }
-            
-            .nav-hero .logo span {
-                color: var(--red);
-            }
             
             .nav-links {
                 display: flex;
@@ -471,37 +490,37 @@
             .nav-links a:hover {
                 color: var(--red);
             }
-            @media (max-width: 768px) {
-            .nav-hero {
+       
+        @media (max-width: 768px) {
+            .nav {
                 flex-direction: column;
                 gap: 1.5rem;
-                text-align: center;
-            }
-            
-            .nav-hero .logo {
-                font-size: 1.75rem;
+                padding: 1.5rem;
             }
             
             .nav-links {
                 flex-wrap: wrap;
                 justify-content: center;
                 gap: 1rem;
-                }
-            }
+            }   
+        
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html" class="nav-logo">Amplified <span>Narrative</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="approach.html">Approach</a></li>
+            <li><a href="#tools">Tools</a></li>
+        </ul>
+    </nav>
+    
     <!-- Hero Section -->
     <section class="hero">
-        <nav class="nav-hero">
-            <a href="index.html" class="logo">Amplified <span>Narrative</span></a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="approach.html">Approach</a></li>
-                <li><a href="#tools">Tools</a></li>
-            </ul>
-        </nav>
+        <div class="logo">Amplified <span>Narrative</span></div>
         <h1>
             The Traditional<br>
             Software Company<br>
@@ -512,7 +531,7 @@
         </p>
         <a href="#tools" class="cta-primary">Stop Competing. Start Creating.</a>
     </section>
-
+    
     <!-- The Platform Shift -->
     <section class="section">
         <h2>The Platform Shift</h2>
