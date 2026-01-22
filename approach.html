@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Approach - Amplified Narrative</title>
+    <meta name="description" content="How category creation has evolved from Play Bigger to today's narrative-driven approach that works in 2026.">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --black: #000000;
+            --white: #FFFFFF;
+            --red: #FF0000;
+            --dark-red: #CC0000;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+            background: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .nav {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 900;
+            letter-spacing: -0.05em;
+            text-transform: uppercase;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo span {
+            color: var(--red);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--red);
+        }
+
+        .hero-approach {
+            padding: 4rem 2rem 6rem;
+            max-width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: clamp(2.5rem, 6vw, 4.5rem);
+            font-weight: 900;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+        }
+
+        .subtitle {
+            font-size: clamp(1.25rem, 2.5vw, 1.75rem);
+            font-weight: 600;
+            color: var(--red);
+            margin-bottom: 3rem;
+            line-height: 1.4;
+        }
+
+        .content-section {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        .content-section-wide {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            letter-spacing: -0.03em;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            line-height: 1.1;
+            color: var(--red);
+        }
+
+        h3 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 800;
+            margin: 3rem 0 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: -0.02em;
+        }
+
+        p {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .emphasis {
+            font-weight: 900;
+            color: var(--red);
+        }
+
+        .timeline-section {
+            margin: 4rem 0;
+        }
+
+        .timeline-item {
+            margin: 3rem 0;
+            padding: 2rem;
+            border-left: 5px solid var(--red);
+            background: rgba(255, 0, 0, 0.05);
+        }
+
+        .timeline-year {
+            font-size: 1rem;
+            font-weight: 900;
+            color: var(--red);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-item h3 {
+            margin-top: 0;
+            color: var(--white);
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 3rem 0;
+            font-size: 1rem;
+        }
+
+        .comparison-table th {
+            background: var(--red);
+            color: var(--white);
+            padding: 1.5rem 1rem;
+            text-align: left;
+            font-weight: 900;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 0.05em;
+        }
+
+        .comparison-table td {
+            padding: 1.5rem 1rem;
+            border-bottom: 2px solid var(--red);
+            vertical-align: top;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .comparison-table .category {
+            font-weight: 700;
+            color: var(--red);
+            width: 25%;
+        }
+
+        .split-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            margin: 3rem 0;
+        }
+
+        .split-card {
+            padding: 2rem;
+            border: 3px solid var(--red);
+        }
+
+        .split-card h3 {
+            margin-top: 0;
+            color: var(--red);
+        }
+
+        .split-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .split-card li {
+            padding: 0.75rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .split-card li:before {
+            content: "→";
+            position: absolute;
+            left: 0;
+            color: var(--red);
+            font-weight: 900;
+        }
+
+        .key-principles {
+            background: var(--red);
+            padding: 3rem 2rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .key-principles h2 {
+            color: var(--white);
+        }
+
+        .principles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            text-align: left;
+        }
+
+        .principle-item {
+            background: var(--black);
+            padding: 2rem;
+            border: 3px solid var(--black);
+        }
+
+        .principle-number {
+            font-size: 3rem;
+            font-weight: 900;
+            color: var(--red);
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .principle-item h3 {
+            margin: 0 0 1rem 0;
+            font-size: 1.25rem;
+            color: var(--white);
+        }
+
+        .principle-item p {
+            font-size: 1rem;
+            margin: 0;
+        }
+
+        .pullquote {
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.4;
+            margin: 4rem 0;
+            padding: 2rem;
+            border-top: 3px solid var(--red);
+            border-bottom: 3px solid var(--red);
+            text-align: center;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 6rem 2rem;
+            background: var(--red);
+            margin-top: 4rem;
+        }
+
+        .cta-section h2 {
+            color: var(--white);
+            margin-bottom: 2rem;
+        }
+
+        .cta-section p {
+            font-size: 1.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .cta-primary {
+            display: inline-block;
+            background: var(--white);
+            color: var(--red);
+            padding: 1.5rem 3rem;
+            font-size: 1.25rem;
+            font-weight: 900;
+            text-transform: uppercase;
+            text-decoration: none;
+            letter-spacing: 0.05em;
+            transition: all 0.2s;
+            border: 3px solid var(--white);
+            margin: 0.5rem;
+        }
+
+        .cta-primary:hover {
+            background: var(--black);
+            color: var(--white);
+            border-color: var(--black);
+            transform: translate(-4px, -4px);
+            box-shadow: 4px 4px 0 var(--white);
+        }
+
+        @media (max-width: 768px) {
+            .nav {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .hero-approach {
+                padding: 2rem 1.5rem 4rem;
+            }
+
+            .content-section,
+            .content-section-wide {
+                padding: 2rem 1.5rem;
+            }
+
+            p {
+                font-size: 1.125rem;
+            }
+
+            .split-section {
+                grid-template-columns: 1fr;
+            }
+
+            .comparison-table {
+                font-size: 0.875rem;
+            }
+
+            .comparison-table th,
+            .comparison-table td {
+                padding: 1rem 0.5rem;
+            }
+
+            .principles-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .pullquote {
+                font-size: 1.5rem;
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <a href="index.html" class="logo">Amplified <span>Narrative</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="approach.html">Approach</a></li>
+            <li><a href="index.html#tools">Tools</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
+    <section class="hero-approach">
+        <h1>The Evolution of Category Creation</h1>
+        <p class="subtitle">How we got here, what changed, and what works now in 2026</p>
+    </section>
+
+    <!-- Timeline -->
+    <section class="content-section">
+        <h2>The Category Creation Timeline</h2>
+        <p>Category creation isn't new. But the playbook has fundamentally changed. Here's how we got here:</p>
+
+        <div class="timeline-section">
+            <div class="timeline-item">
+                <div class="timeline-year">2016</div>
+                <h3>Play Bigger: Category Kings</h3>
+                <p>Al Ramadan, Dave Peterson, Christopher Lochhead, and Kevin Maney published <em>Play Bigger</em>, codifying category design as a strategic discipline. Their thesis: companies that create and dominate categories capture disproportionate value (76% of market cap in their category).</p>
+                <p><span class="emphasis">What they got right:</span> Categories matter more than products. The company that defines the category wins even if they don't have the "best" product.</p>
+                <p><span class="emphasis">What assumed a different world:</span> The lightning strike launch model. Massive budgets. PR orchestration. Analyst relations. The idea that you "design" a category internally, then launch it with coordinated awareness campaigns.</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2019</div>
+                <h3>Obviously Awesome: Positioning</h3>
+                <p>April Dunford published <em>Obviously Awesome</em>, creating a rigorous framework for positioning. Her focus: how to position your product effectively within the market's existing understanding.</p>
+                <p><span class="emphasis">What she got right:</span> Positioning is a strategic discipline. You need clarity on your differentiated value, your best-fit customers, and the market context that makes you the obvious choice.</p>
+                <p><span class="emphasis">What it doesn't solve:</span> Positioning assumes the category already exists. If you're competing in an established category, positioning helps you win share. But you're still paying the competition tax.</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2024-2026</div>
+                <h3>The AI Platform Shift</h3>
+                <p>AI becomes the platform. Technical capabilities become commodities. What took months to build now takes days. Network effects and data moats—once sustainable advantages—become table stakes just to survive.</p>
+                <p><span class="emphasis">What changed everything:</span> Distribution shifted from gatekeepers (media, analysts, VCs) to direct founder-audience relationships. The "lightning strike" model died because you can't orchestrate attention anymore—you earn it through consistent narrative building.</p>
+                <p><span class="emphasis">The new reality:</span> Categories don't emerge from orchestrated launches. They emerge from daily narrative velocity that transforms how markets think.</p>
+            </div>
+
+            <div class="timeline-item">
+                <div class="timeline-year">2026</div>
+                <h3>Amplified Narrative: Category Creation Through Narrative Velocity</h3>
+                <p>The synthesis. Category creation that works when AI has commoditized capability, when founders can ship faster than ever, when distribution is direct, and when the individual empire is the new default.</p>
+                <p><span class="emphasis">The approach:</span> Build your category narrative in public. Daily. The category doesn't come from a deck—it comes from the accumulated weight of consistent narrative that transforms market thinking.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Changed -->
+    <section class="content-section">
+        <h2>What Changed Since 2016</h2>
+        <p>Play Bigger's insights about category importance were correct. But the <em>how</em> has fundamentally changed:</p>
+
+        <div class="split-section">
+            <div class="split-card">
+                <h3>Then (2016)</h3>
+                <ul>
+                    <li>Lightning strike launches</li>
+                    <li>PR agency orchestration</li>
+                    <li>Analyst relations required</li>
+                    <li>$10M+ marketing budgets</li>
+                    <li>Gatekeeper distribution</li>
+                    <li>18-month category design engagements</li>
+                    <li>Big reveal moments</li>
+                    <li>Consultant-driven strategy</li>
+                </ul>
+            </div>
+
+            <div class="split-card">
+                <h3>Now (2026)</h3>
+                <ul>
+                    <li>Daily narrative building</li>
+                    <li>Founder-led content</li>
+                    <li>Direct audience relationships</li>
+                    <li>Accessible to any founder</li>
+                    <li>Platform-native distribution</li>
+                    <li>Iterative, public category emergence</li>
+                    <li>Continuous amplification</li>
+                    <li>Founder-owned strategy</li>
+                </ul>
+            </div>
+        </div>
+
+        <p>The fundamental insight—that categories matter more than products—remains true. The mechanism for creating them has completely changed.</p>
+    </section>
+
+    <!-- Comparison Table -->
+    <section class="content-section-wide">
+        <h2>How The Approaches Compare</h2>
+        <p>You need all three. But each solves a different problem:</p>
+
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Dimension</th>
+                    <th>Play Bigger (2016)</th>
+                    <th>Obviously Awesome (2019)</th>
+                    <th>Amplified Narrative (2026)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="category">Core Problem</td>
+                    <td>How do we create and dominate a new category?</td>
+                    <td>How do we position effectively in an existing category?</td>
+                    <td>How do we create categories through narrative velocity in the AI era?</td>
+                </tr>
+                <tr>
+                    <td class="category">Primary Focus</td>
+                    <td>Category design and orchestrated launches</td>
+                    <td>Product positioning and differentiation</td>
+                    <td>Daily narrative building and amplification</td>
+                </tr>
+                <tr>
+                    <td class="category">Distribution Model</td>
+                    <td>PR, analysts, media gatekeepers</td>
+                    <td>Assumes marketing/sales will execute positioning</td>
+                    <td>Founder-led content, direct audience relationships</td>
+                </tr>
+                <tr>
+                    <td class="category">Timeline</td>
+                    <td>18+ months with big reveal</td>
+                    <td>Positioning sprint (weeks), then execute</td>
+                    <td>Continuous, daily narrative building</td>
+                </tr>
+                <tr>
+                    <td class="category">Budget Required</td>
+                    <td>$10M+ marketing budget, $200K-500K consultants</td>
+                    <td>Workshop/consulting fees, existing marketing budget</td>
+                    <td>Founder time + commitment to daily amplification</td>
+                </tr>
+                <tr>
+                    <td class="category">Who It's For</td>
+                    <td>Well-funded startups, Series B+</td>
+                    <td>Any company needing positioning clarity</td>
+                    <td>Any founder with a category insight to amplify</td>
+                </tr>
+                <tr>
+                    <td class="category">Assumes</td>
+                    <td>Stability, time to orchestrate, gatekeeper access</td>
+                    <td>Category framework exists, need differentiation</td>
+                    <td>AI commoditization, direct distribution, rapid iteration</td>
+                </tr>
+                <tr>
+                    <td class="category">Success Metric</td>
+                    <td>Category ownership, market cap dominance</td>
+                    <td>Clear differentiation, sales effectiveness</td>
+                    <td>Narrative velocity, market transformation speed</td>
+                </tr>
+                <tr>
+                    <td class="category">When to Use</td>
+                    <td>Post-PMF, significant funding, enterprise focus</td>
+                    <td>When messaging is unclear or sales struggles</td>
+                    <td>When competing on features in commoditizing market</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Key Insight -->
+    <section class="content-section">
+        <div class="pullquote">
+            "Play Bigger taught us categories matter. Obviously Awesome taught us positioning matters. Amplified Narrative teaches us that narrative velocity is how you create categories in 2026."
+        </div>
+    </section>
+
+    <!-- Why You Need Both -->
+    <section class="content-section">
+        <h2>Why You Need Positioning AND Category Creation</h2>
+        
+        <p>Obviously Awesome and category creation aren't competing approaches—they're complementary:</p>
+
+        <h3>Start With Category Creation</h3>
+        <p>Define the problem transformation. Identify what makes your approach categorically different (not incrementally better). Articulate the narrative shift required for customers to choose you.</p>
+        <p><span class="emphasis">This is your strategic foundation.</span> Without it, you're positioning within someone else's category framework.</p>
+
+        <h3>Then Use Positioning Rigor</h3>
+        <p>Apply Obviously Awesome's framework to articulate your differentiated value, identify your best-fit customers, and create messaging that makes your category POV obvious to the market.</p>
+        <p><span class="emphasis">This is your tactical execution.</span> You know what category you're creating; now position yourself clearly within it.</p>
+
+        <h3>Then Amplify Daily</h3>
+        <p>Build your narrative in public. Daily founder-led content. Use market reaction to refine. Let the category emerge from the accumulated weight of consistent narrative building.</p>
+        <p><span class="emphasis">This is your category creation mechanism.</span> No lightning strike. No 18-month consulting engagement. Just daily narrative velocity.</p>
+    </section>
+
+    <!-- The Amplified Narrative Approach -->
+    <section class="key-principles">
+        <h2>The Amplified Narrative Approach</h2>
+        <div class="principles-grid">
+            <div class="principle-item">
+                <div class="principle-number">01</div>
+                <h3>Narrative as Development</h3>
+                <p>Your public narrative isn't marketing—it's R&D. Test ideas, refine positioning, discover resonance, invite co-creation.</p>
+            </div>
+
+            <div class="principle-item">
+                <div class="principle-number">02</div>
+                <h3>Founder's Voice as Distribution</h3>
+                <p>Authenticity is the only signal that cuts through AI noise. The narrative must come from the founder because nobody else has the insight.</p>
+            </div>
+
+            <div class="principle-item">
+                <div class="principle-number">03</div>
+                <h3>Amplification as Validation</h3>
+                <p>Don't guess whether your narrative works. Watch how it spreads. Measure how it transforms conversations. Iterate based on resonance.</p>
+            </div>
+
+            <div class="principle-item">
+                <div class="principle-number">04</div>
+                <h3>Velocity as Strategy</h3>
+                <p>You're not building for a category that will exist in two years. You're creating the category that must exist NOW—before the platform commoditizes your advantages.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- What This Means -->
+    <section class="content-section">
+        <h2>What This Means for You</h2>
+        
+        <p>If you're feeling overwhelmed by competing frameworks, here's the simple truth:</p>
+
+        <p><span class="emphasis">You need all three insights:</span></p>
+        
+        <p><strong>From Play Bigger:</strong> Categories matter more than products. Category kings capture disproportionate value. If you're competing in an existing category, you're fighting for scraps.</p>
+        
+        <p><strong>From Obviously Awesome:</strong> Positioning is a discipline. You need clarity on your differentiated value, your best-fit customers, and the market context that makes you the obvious choice.</p>
+        
+        <p><strong>From Amplified Narrative:</strong> Categories don't come from orchestrated launches anymore. They come from daily narrative building. The distribution channel is your voice. The mechanism is narrative velocity.</p>
+
+        <div class="pullquote">
+            "The category creation playbook hasn't been replaced. It's evolved. This is what works now."
+        </div>
+
+        <p>You don't need a massive budget. You don't need expensive consultants. You don't need 18 months.</p>
+        
+        <p>You need a compelling category POV, the positioning clarity to make it obvious, and the commitment to amplify it daily.</p>
+        
+        <p><span class="emphasis">That's the synthesis. That's what works in 2026.</span></p>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <h2>Ready to Create Your Category?</h2>
+        <p>Start with the frameworks that work in 2026.</p>
+        <a href="index.html#tools" class="cta-primary">Get the Category POV Canvas</a>
+        <a href="index.html#tools" class="cta-primary">Take the Moat Velocity Assessment</a>
+    </section>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
