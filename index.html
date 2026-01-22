@@ -343,6 +343,91 @@
                 padding: 5rem 1.5rem;
             }
         }
+            .faq-container {
+                max-width: 900px;
+                margin: 0 auto;
+            }
+            
+            .faq-item {
+                border-bottom: 2px solid var(--red);
+                margin-bottom: 0;
+            }
+            
+            .faq-question {
+                width: 100%;
+                background: none;
+                border: none;
+                padding: 2rem 0;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                cursor: pointer;
+                font-size: 1.25rem;
+                font-weight: 700;
+                color: var(--white);
+                text-align: left;
+                transition: color 0.2s;
+            }
+            
+            .faq-question:hover {
+                color: var(--red);
+            }
+            
+            .faq-icon {
+                font-size: 2rem;
+                font-weight: 300;
+                color: var(--red);
+                transition: transform 0.3s;
+                flex-shrink: 0;
+                margin-left: 1rem;
+            }
+            
+            .faq-item.active .faq-icon {
+                transform: rotate(45deg);
+            }
+            
+            .faq-answer {
+                max-height: 0;
+                overflow: hidden;
+                transition: max-height 0.4s ease-out, padding 0.4s ease-out;
+                padding: 0;
+            }
+            
+            .faq-item.active .faq-answer {
+                max-height: 2000px;
+                padding-bottom: 2rem;
+            }
+            
+            .faq-answer p {
+                font-size: 1.125rem;
+                line-height: 1.7;
+                margin-bottom: 1rem;
+            }
+            
+            .faq-answer ul {
+                margin: 1rem 0 1rem 2rem;
+                line-height: 1.8;
+            }
+            
+            .faq-answer li {
+                margin-bottom: 0.5rem;
+            }
+            
+            .faq-answer strong {
+                color: var(--red);
+                font-weight: 700;
+            }
+            
+            @media (max-width: 768px) {
+                .faq-question {
+                    font-size: 1.125rem;
+                    padding: 1.5rem 0;
+                }
+                
+                .faq-answer p {
+                    font-size: 1rem;
+                }
+            }
     </style>
 </head>
 <body>
@@ -540,7 +625,212 @@
             </div>
         </div>
     </section>
-
+    <!-- FAQ Section -->
+    <section id="faq" class="section">
+        <h2>Questions Founders Ask</h2>
+        <p class="large-text" style="margin-bottom: 3rem;">
+            Real questions from founders trying to understand if category creation is right for them.
+        </p>
+        
+        <div class="faq-container">
+            <!-- Question 1 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Isn't category creation only for venture-backed companies with massive budgets?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>That's the old playbook. Play Bigger (2016) assumed you needed $10M+ in marketing spend, PR agencies, and analyst relations to create a category. That model is dead.</p>
+                    <p>Today, category creation happens through <strong>narrative velocity</strong>—daily founder-led content that transforms how your market thinks. You don't need a massive budget. You need a compelling POV and the commitment to amplify it consistently.</p>
+                    <p>We've seen bootstrapped founders and smaller SaaS companies create categories by building their narrative in public. The distribution channel is your voice, not your wallet.</p>
+                </div>
+            </div>
+    
+            <!-- Question 2 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How is this different from positioning?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Positioning (like Obviously Awesome) assumes the category already exists. You're figuring out how to position yourself <em>within</em> an existing category framework.</p>
+                    <p><strong>Category creation transforms the category itself.</strong> You're not positioning within "project management software"—you're creating "asynchronous collaboration platforms" or "context-aware work coordination."</p>
+                    <p>Positioning answers: "Why us instead of them?"<br>
+                    Category creation answers: "Why this way instead of the old way?"</p>
+                    <p>You need both. But if you're only doing positioning, you're competing in someone else's category and paying the competition tax.</p>
+                </div>
+            </div>
+    
+            <!-- Question 3 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What if my product isn't that different from competitors?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>This is exactly why you need category creation. If your product isn't fundamentally different, competing on features is a race to the bottom.</p>
+                    <p><strong>Category creation isn't about product differentiation—it's about problem reframing.</strong> Salesforce didn't have radically different CRM features. They reframed the problem from "how do we install better CRM software?" to "why are we installing software at all?"</p>
+                    <p>The Category POV Canvas helps you identify the problem transformation that makes your approach inevitable, even if your product features are similar to competitors.</p>
+                    <p>You're not selling features. You're selling a different way of thinking about the problem.</p>
+                </div>
+            </div>
+    
+            <!-- Question 4 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How long does it take to create a category?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>There's no "launch day" for a category. The old model (18-month consultant-driven category design culminating in a big reveal) doesn't work anymore.</p>
+                    <p><strong>Categories emerge from daily narrative building.</strong> You start seeing traction in weeks—people using your language, referencing your frameworks, seeking you out as the authority.</p>
+                    <p>Meaningful category ownership? 6-18 months of consistent narrative amplification. But you see leading indicators much faster:</p>
+                    <ul>
+                        <li>Week 1-4: Market reaction to your POV (do people engage/share?)</li>
+                        <li>Month 2-3: Sales conversations shift (less feature comparison, more strategic discussions)</li>
+                        <li>Month 4-6: Third parties start referencing your category language</li>
+                        <li>Month 6-12: Competitors start positioning against you (you've defined the battlefield)</li>
+                        <li>Month 12-18: Industry recognition, media coverage, clear category leadership</li>
+                    </ul>
+                    <p>The question isn't "how long?" but "are you building velocity every day?"</p>
+                </div>
+            </div>
+    
+            <!-- Question 5 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What if we're already established in an existing category?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Then you're paying the competition tax every quarter: longer sales cycles, compressed margins, constant feature comparisons.</p>
+                    <p><strong>You can create a new category or sub-category even if you're established.</strong> HubSpot was a marketing automation platform (established category). They created "inbound marketing" as a new category and owned it.</p>
+                    <p>The question is: can you afford NOT to? Every quarter you compete in an existing category, AI and new entrants are commoditizing your advantages. Category creation is how you escape.</p>
+                    <p>Your existing brand and customer base are actually advantages—you have distribution to amplify your new narrative.</p>
+                </div>
+            </div>
+    
+            <!-- Question 6 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Do I need to hire a category design consultant?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Not unless you have $200K-500K to spend on an 18-month engagement.</p>
+                    <p>The old consulting model made sense in 2016 when category creation required orchestrated analyst relations, PR campaigns, and executive ghostwriting. It was operationally complex.</p>
+                    <p><strong>Today's category creation is about narrative velocity, not operational complexity.</strong> You need frameworks and systems, not $50K/month consultants.</p>
+                    <p>That said, if you're Series B+ with complex enterprise sales and need help orchestrating across multiple stakeholders, consultants can add value. But most founders don't need that level of intervention—they need clarity on their narrative and a system to amplify it.</p>
+                </div>
+            </div>
+    
+            <!-- Question 7 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What's the ROI of category creation?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Let's flip the question: <strong>What's the cost of NOT creating a category?</strong></p>
+                    <p>The competition tax (competing in existing categories) costs you $400-600K annually:</p>
+                    <ul>
+                        <li>Sales cycles 2-3x longer (fighting for existing budget)</li>
+                        <li>Marketing costs 40-60% higher (bidding against incumbents)</li>
+                        <li>Deal sizes 30-50% smaller (feature comparison drives prices down)</li>
+                        <li>Win rates lower (competing against 5-10 alternatives per deal)</li>
+                    </ul>
+                    <p><strong>Category creators see the inverse:</strong> shorter sales cycles (you're creating new budget, not fighting for existing), premium pricing (you're differentiated, not compared), higher win rates (you set the buying criteria).</p>
+                    <p>Companies that create categories grow 3-5x faster than category competitors and command 2-3x higher valuations. The ROI isn't incremental—it's categorical.</p>
+                </div>
+            </div>
+    
+            <!-- Question 8 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Can AI help with category creation?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>AI can help with execution (writing content, analyzing market language, generating variations), but it can't do the strategic work.</p>
+                    <p><strong>Category creation requires founder-led insight.</strong> AI doesn't have the industry context, customer pain understanding, or contrarian POV needed to identify the problem transformation that makes your category inevitable.</p>
+                    <p>AI amplifies your narrative velocity (you can publish more, faster), but the narrative itself must come from you. Authenticity is the only signal that cuts through AI-generated noise.</p>
+                    <p>Use AI for: content drafting, SEO optimization, format variations, competitive research.<br>
+                    Don't use AI for: defining your category POV, identifying problem transformation, building your unique narrative.</p>
+                </div>
+            </div>
+    
+            <!-- Question 9 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What if our category name doesn't stick?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>The name matters less than the narrative. Don't get paralyzed trying to find the perfect category name.</p>
+                    <p><strong>Start with the problem transformation, not the label.</strong> If your narrative is compelling, the market will help you refine the language. Build in public, test variations, watch what resonates.</p>
+                    <p>Slack didn't obsess over the category name—they focused on the narrative: "email is where work goes to die." The category language evolved organically as the narrative spread.</p>
+                    <p>You can iterate the category name as you go. What you can't iterate is time—every day you delay is another day paying the competition tax.</p>
+                </div>
+            </div>
+    
+            <!-- Question 10 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>How do we know if we're building narrative velocity fast enough?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>That's exactly what the Moat Velocity Assessment measures. It looks at:</p>
+                    <ul>
+                        <li><strong>Product defensibility:</strong> How fast competitors can replicate your advantages</li>
+                        <li><strong>Market position:</strong> Whether you own a category or compete in one</li>
+                        <li><strong>Narrative velocity:</strong> How often you're building and amplifying your narrative</li>
+                        <li><strong>Commercial health:</strong> Whether your metrics show differentiation or commoditization</li>
+                    </ul>
+                    <p>Leading indicators of velocity:</p>
+                    <ul>
+                        <li>Prospects using your language without prompting</li>
+                        <li>Inbound mentions from industry sources</li>
+                        <li>Sales conversations shifting from feature comparison to strategic discussion</li>
+                        <li>Competitors positioning against your category (not the other way around)</li>
+                    </ul>
+                    <p><strong>If you're not seeing these within 90 days of consistent narrative building, you need to sharpen your POV or increase frequency.</strong></p>
+                </div>
+            </div>
+    
+            <!-- Question 11 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>What happens if a competitor copies our category?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>That's actually validation—it means your category is working.</p>
+                    <p><strong>Category creators own the narrative even when competitors enter.</strong> Salesforce created "No Software" and owned cloud CRM even after dozens of competitors emerged. HubSpot created "Inbound Marketing" and remained the authority even as others adopted the language.</p>
+                    <p>The moat isn't the category name—it's your narrative velocity. If you're consistently building and amplifying your POV, you stay ahead. Competitors can copy features instantly. They can't copy your narrative velocity.</p>
+                    <p>By the time they copy your category language, you've already evolved the narrative. That's why daily narrative building matters—it creates separation that's impossible to replicate.</p>
+                </div>
+            </div>
+    
+            <!-- Question 12 -->
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span>Is this just thought leadership rebranded?</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>No. Thought leadership is content for credibility. Category creation is narrative for transformation.</p>
+                    <p><strong>Thought leadership says:</strong> "We're experts in [existing category]. Here's what we know."<br>
+                    <strong>Category creation says:</strong> "The way everyone approaches [problem] is wrong. Here's the new way."</p>
+                    <p>Thought leadership positions you as smart within the existing framework.<br>
+                    Category creation transforms the framework itself.</p>
+                    <p>Thought leadership is helpful content that establishes authority.<br>
+                    Category creation is disruptive narrative that creates new market demand.</p>
+                    <p>You can do both, but they serve different strategic purposes. If all you're doing is thought leadership without problem transformation, you're not creating a category—you're reinforcing the existing one.</p>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Final CTA -->
     <section class="final-cta">
         <h2>The Category Won't Wait.</h2>
@@ -569,5 +859,27 @@
             });
         });
     </script>
+<script>
+// FAQ Accordion functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question');
+        
+        question.addEventListener('click', () => {
+            // Close other open items
+            faqItems.forEach(otherItem => {
+                if (otherItem !== item && otherItem.classList.contains('active')) {
+                    otherItem.classList.remove('active');
+                }
+            });
+            
+            // Toggle current item
+            item.classList.toggle('active');
+        });
+    });
+});
+</script>
 </body>
 </html>
