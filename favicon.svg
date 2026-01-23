@@ -1,0 +1,13 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Black background -->
+  <rect width="64" height="64" fill="#000000"/>
+  
+  <!-- Red border -->
+  <rect x="2" y="2" width="60" height="60" fill="none" stroke="#FF0000" stroke-width="3"/>
+  
+  <!-- Large bold "A" for Amplified -->
+  <text x="32" y="45" font-family="Arial, sans-serif" font-size="42" font-weight="900" fill="#FFFFFF" text-anchor="middle">A</text>
+  
+  <!-- Small "N" accent in red -->
+  <text x="50" y="20" font-family="Arial, sans-serif" font-size="16" font-weight="900" fill="#FF0000" text-anchor="middle">N</text>
+</svg>
