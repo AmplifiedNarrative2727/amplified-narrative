@@ -192,7 +192,7 @@
 
         .problem-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             gap: 3rem;
             margin: 3rem 0;
         }
@@ -209,11 +209,12 @@
         }
 
         .stat {
-            font-size: clamp(3rem, 6vw, 5rem);
+            font-size: clamp(2.5rem, 5vw, 4rem);
             font-weight: 900;
             color: var(--red);
             line-height: 1;
             margin-bottom: 0.5rem;
+            white-space: nowrap;
         }
 
         .section-alt .stat {
